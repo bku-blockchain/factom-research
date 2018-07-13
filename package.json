@@ -1,0 +1,39 @@
+{
+  "name": "factom",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "homepage": "https://github.com/huynhsamha/factom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/factom.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huynhsamha/factom/issues"
+  },
+  "engines": {
+    "node": ">=6.10.0",
+    "npm": ">=3.10.8"
+  },
+  "contributors": [
+    "huynhsamha"
+  ]
+}
