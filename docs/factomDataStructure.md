@@ -119,7 +119,7 @@ trong đó:
 
 
 ### Chain Commit
-
+Chain Commit là một thanh toán đồng thời cho một Entry cụ thể, và một thanh toán cho phép tạo ra một Chain mới được tạo ra.
 
 | Data | Field Name | Description |
 | ----------------- | ---------------- | --------------- |
