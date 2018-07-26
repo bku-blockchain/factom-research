@@ -1,4 +1,4 @@
-# Factom
+# Factom - Whitepaper
 
 ## Mục tiêu ra đời và phát triển
 
@@ -33,13 +33,11 @@ Người dùng có thể sử dụng bất kì tập luật nào cho những Cha
 
 Việc validation ở ứng dụng cùng với việc tự định nghĩa chains của người dùng tạo ra các thuận lợi như sau:
 
-	+ Ứng dụng có thể đặt vào Factom bất kì entries nào có ý nghĩa cho ứng dụng. Do đó, 1 danh sách các giá trị hashes dùng để validate 1 danh sách các lệnh có thể được ghi nhận dễ dàng như việc trao đổi 1 tài sản.
-	+ Việc thực thi luật rất hiệu quả. Khi mạng lưới phân tán phải thực thi tập luật validate của bạn, việc validation yêu cầu tất cả các node phải thực hiện. Còn việc vaidate ở phía client chỉ yêu cầu hệ thống quan tâm đến các luật đó để thực thi chúng. Factom để cho 1 Chain tự định nghĩa các luật của nó trong bất kì ngôn ngữ nào mà người thiết kế lựa chọn, và chạy trên bất kì nền tảng nào mà họ chọn, và sử dụng bất kì dữ liệu nào bên ngoài. Không có những quyết định trên một ứng dụng lại ảnh hưởng đến 1 ứng dụng khác.
-	+ Các máy chủ Factom không biết nhiều về những entries được ghi nhận. Chúng ta sử dụng lược đồ cam kết (commitment scheme) để giới hạn lại lượng hiểu biết, khi mà việc cam kết đối để ghi nhận 1 entry được thực hiện trước việc tiết lộ (reveal) entry đó là gì. Điều này làm cho vai trò cua Factom trong việc ghi nhận các entries trở nên rất đơn giản, và làm cho các máy chủ cá nhân tiến hành một công khai. Các máy chủ Factom chấp nhận những thông tin từ mạng full node, và những quyết định và hành vi của họ luôn được xem xét. Sự thất bại có thể được audit từ cả mạng ngoài Factom và bên trọng mạng Factom. Rất dễ dàng cho việc verify độc lập một máy chủ Factom hoàn thành trách nhiệm ghi nhận entries. Factom không thể che giấu các hành vi sai trái.
-	+ Tốc độ ghi nhận có thể rất nhanh, bởi vì số lần kiểm tra được thực hiện bởi các máy chủ Factom là tối thiểu.
-	+ Các bằng chứng chống lại một Chain trong Factom không yêu cầu các kiến thức (tập luật hay chương trình audit) của bất kì Chains nào khác. Những người dùng chỉ cần một phần của Factom họ đang sử dụng và ignore những cái khác.
-
-
++ Ứng dụng có thể đặt vào Factom bất kì entries nào có ý nghĩa cho ứng dụng. Do đó, 1 danh sách các giá trị hashes dùng để validate 1 danh sách các lệnh có thể được ghi nhận dễ dàng như việc trao đổi 1 tài sản.
++ Việc thực thi luật rất hiệu quả. Khi mạng lưới phân tán phải thực thi tập luật validate của bạn, việc validation yêu cầu tất cả các node phải thực hiện. Còn việc vaidate ở phía client chỉ yêu cầu hệ thống quan tâm đến các luật đó để thực thi chúng. Factom để cho 1 Chain tự định nghĩa các luật của nó trong bất kì ngôn ngữ nào mà người thiết kế lựa chọn, và chạy trên bất kì nền tảng nào mà họ chọn, và sử dụng bất kì dữ liệu nào bên ngoài. Không có những quyết định trên một ứng dụng lại ảnh hưởng đến 1 ứng dụng khác.
++ Các máy chủ Factom không biết nhiều về những entries được ghi nhận. Chúng ta sử dụng lược đồ cam kết (commitment scheme) để giới hạn lại lượng hiểu biết, khi mà việc cam kết đối để ghi nhận 1 entry được thực hiện trước việc tiết lộ (reveal) entry đó là gì. Điều này làm cho vai trò cua Factom trong việc ghi nhận các entries trở nên rất đơn giản, và làm cho các máy chủ cá nhân tiến hành một công khai. Các máy chủ Factom chấp nhận những thông tin từ mạng full node, và những quyết định và hành vi của họ luôn được xem xét. Sự thất bại có thể được audit từ cả mạng ngoài Factom và bên trọng mạng Factom. Rất dễ dàng cho việc verify độc lập một máy chủ Factom hoàn thành trách nhiệm ghi nhận entries. Factom không thể che giấu các hành vi sai trái.
++ Tốc độ ghi nhận có thể rất nhanh, bởi vì số lần kiểm tra được thực hiện bởi các máy chủ Factom là tối thiểu.
++ Các bằng chứng chống lại một Chain trong Factom không yêu cầu các kiến thức (tập luật hay chương trình audit) của bất kì Chains nào khác. Những người dùng chỉ cần một phần của Factom họ đang sử dụng và ignore những cái khác.
 
 
 ## Các máy chủ liên kết quản lý các chains như thế nào?
