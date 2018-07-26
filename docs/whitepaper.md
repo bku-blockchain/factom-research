@@ -1,30 +1,22 @@
 # Factom
 
-### Mục tiêu ra đời và phát triển
+## Mục tiêu ra đời và phát triển
 
-#### 3 Vấn đề của Bitcoin
-##### Tốc độ giao dịch Bitcoin
-Giao dịch Bitcoin mất ít nhất 10 phút cho một lần xác nhận. 
-
-Có tới 6 lần xác nhận để giao dịch được xử lý đầy đủ, nhiều người phải mất hơn 1 giờ để hoàn thành giao dịch.
+### Những vấn đề của Bitcoin
+#### Tốc độ
+Giao dịch Bitcoin mất ít nhất 10 phút cho một lần xác nhận. Có tới 6 lần xác nhận để giao dịch được xử lý đầy đủ, nhiều người phải mất hơn 1 giờ để hoàn thành giao dịch.
 
 
-##### Chi phí giao dịch Bitcoin
-Chi phí cho 1 transaction khoảng 0.01 mBTC.
+#### Chi phí
+Chi phí cho 1 transaction khoảng 0.01 mBTC. Giá trị Bitcoin liên tục biến động. Giá BTC tăng => chi phí cho transaction tăng.
 
-Giá trị Bitcoin liên tục biến động.
-
-Giá BTC tăng => chi phí cho transaction tăng.
-
-##### Quá tải về kích thước block và số transactions của Bitcoin
+#### Quá tải về kích thước block và số transactions của Bitcoin
 
 Kích thước giới hạn 1 MB / block.
 
-Tối đa được 7 transactions / second 
-		= 7*24*60*60 	transactions / day
-		= 604,800 		transactions / day
+Tối đa được 7 transactions / second = 7\*24\*60\*60 	transactions / day = 604,800 		transactions / day
 
-#### Factom giải quyết 3 vấn đề của Bitcoin
+### Factom giải quyết 3 vấn đề của Bitcoin
 
 Factom là một giao thức được thiết kế để giải quyết 3 vấn đề này ở Bitcoin.
 
@@ -33,9 +25,7 @@ Factom tạo ra một giao thức cho các ứng dụng cung cấp các chức n
 Factom xây dựng một nền tảng tiêu chuẩn, hiệu quả và an toàn cho các ứng dụng này để chạy nhanh hơn, rẻ hơn và không bị tình trạng quá tải ở Bitcoin.
 
 
-### How Applications Validate Factom Chains
-
-Cách các ứng dụng validate các Chains trong Factom
+## Cách các ứng dụng validate các Chains trong Factom
 
 Factom không validate Entries. Entries thay vào đó được valiated bởi users hoặc các ứng dụng ở phía client. Miễn là ứng dụng hiểu được và biết các luật một Chain được tạo ra thì sự tồn tại của các Entries invalid không gây ra sự gián đoạn. Các Entries không tuân theo luật mà ứng dụng hiểu trong một Chain có thể được ignored bởi ứng dụng.
 
@@ -43,18 +33,16 @@ Người dùng có thể sử dụng bất kì tập luật nào cho những Cha
 
 Việc validation ở ứng dụng cùng với việc tự định nghĩa chains của người dùng tạo ra các thuận lợi như sau:
 
-	Ứng dụng có thể đặt vào Factom bất kì entries nào có ý nghĩa cho ứng dụng. Do đó, 1 danh sách các giá trị hashes dùng để validate 1 danh sách các lệnh có thể được ghi nhận dễ dàng như việc trao đổi 1 tài sản.
-	Việc thực thi luật rất hiệu quả. Khi mạng lưới phân tán phải thực thi tập luật validate của bạn, việc validation yêu cầu tất cả các node phải thực hiện. Còn việc vaidate ở phía client chỉ yêu cầu hệ thống quan tâm đến các luật đó để thực thi chúng. Factom để cho 1 Chain tự định nghĩa các luật của nó trong bất kì ngôn ngữ nào mà người thiết kế lựa chọn, và chạy trên bất kì nền tảng nào mà họ chọn, và sử dụng bất kì dữ liệu nào bên ngoài. Không có những quyết định trên một ứng dụng lại ảnh hưởng đến 1 ứng dụng khác.
-	Các máy chủ Factom không biết nhiều về những entries được ghi nhận. Chúng ta sử dụng lược đồ cam kết (commitment scheme) để giới hạn lại lượng hiểu biết, khi mà việc cam kết đối để ghi nhận 1 entry được thực hiện trước việc tiết lộ (reveal) entry đó là gì. Điều này làm cho vai trò cua Factom trong việc ghi nhận các entries trở nên rất đơn giản, và làm cho các máy chủ cá nhân tiến hành một công khai. Các máy chủ Factom chấp nhận những thông tin từ mạng full node, và những quyết định và hành vi của họ luôn được xem xét. Sự thất bại có thể được audit từ cả mạng ngoài Factom và bên trọng mạng Factom. Rất dễ dàng cho việc verify độc lập một máy chủ Factom hoàn thành trách nhiệm ghi nhận entries. Factom không thể che giấu các hành vi sai trái.
-	Tốc độ ghi nhận có thể rất nhanh, bởi vì số lần kiểm tra được thực hiện bởi các máy chủ Factom là tối thiểu.
-	Các bằng chứng chống lại một Chain trong Factom không yêu cầu các kiến thức (tập luật hay chương trình audit) của bất kì Chains nào khác. Những người dùng chỉ cần một phần của Factom họ đang sử dụng và ignore những cái khác.
+	+ Ứng dụng có thể đặt vào Factom bất kì entries nào có ý nghĩa cho ứng dụng. Do đó, 1 danh sách các giá trị hashes dùng để validate 1 danh sách các lệnh có thể được ghi nhận dễ dàng như việc trao đổi 1 tài sản.
+	+ Việc thực thi luật rất hiệu quả. Khi mạng lưới phân tán phải thực thi tập luật validate của bạn, việc validation yêu cầu tất cả các node phải thực hiện. Còn việc vaidate ở phía client chỉ yêu cầu hệ thống quan tâm đến các luật đó để thực thi chúng. Factom để cho 1 Chain tự định nghĩa các luật của nó trong bất kì ngôn ngữ nào mà người thiết kế lựa chọn, và chạy trên bất kì nền tảng nào mà họ chọn, và sử dụng bất kì dữ liệu nào bên ngoài. Không có những quyết định trên một ứng dụng lại ảnh hưởng đến 1 ứng dụng khác.
+	+ Các máy chủ Factom không biết nhiều về những entries được ghi nhận. Chúng ta sử dụng lược đồ cam kết (commitment scheme) để giới hạn lại lượng hiểu biết, khi mà việc cam kết đối để ghi nhận 1 entry được thực hiện trước việc tiết lộ (reveal) entry đó là gì. Điều này làm cho vai trò cua Factom trong việc ghi nhận các entries trở nên rất đơn giản, và làm cho các máy chủ cá nhân tiến hành một công khai. Các máy chủ Factom chấp nhận những thông tin từ mạng full node, và những quyết định và hành vi của họ luôn được xem xét. Sự thất bại có thể được audit từ cả mạng ngoài Factom và bên trọng mạng Factom. Rất dễ dàng cho việc verify độc lập một máy chủ Factom hoàn thành trách nhiệm ghi nhận entries. Factom không thể che giấu các hành vi sai trái.
+	+ Tốc độ ghi nhận có thể rất nhanh, bởi vì số lần kiểm tra được thực hiện bởi các máy chủ Factom là tối thiểu.
+	+ Các bằng chứng chống lại một Chain trong Factom không yêu cầu các kiến thức (tập luật hay chương trình audit) của bất kì Chains nào khác. Những người dùng chỉ cần một phần của Factom họ đang sử dụng và ignore những cái khác.
 
 
 
 
-### How Factom Federated Servers Manage Chains
-
-Các máy chủ liên kết quản lý các chains như thế nào?
+## Các máy chủ liên kết quản lý các chains như thế nào?
 
 Factom là một phương pháp phân tán để thu thập, đóng gói, bảo vệ dữ liệu vào blockchain Bitcoin. Factom hoàn thành việc này bằng mạng lưới các máy chủ liên kết (Federated Server). Những máy chủ này luân phiên thay đổi trách nhiệm cho những mặt khác nhau trong hệ thống. Không có máy chủ nào điều khiển cả hệ thống mà chỉ một phần trong hệ thống. Và cũng không có máy chủ nào duy trì việc điều khiển bất kì phần nào của hệ thống. Trách nhiệm điều khiển các phần trong hệ thống Factom được xoay vòng giữa các máy chủ từng phút.
 Các máy chủ liên kết chịu trách nhiệm cho một phần con của những Chains của người dùng từ lúc tạo ra một Directory Block. Quá trình đó gồm những bước sau:
@@ -70,12 +58,13 @@ Các máy chủ liên kết chịu trách nhiệm cho một phần con của nh�
 10. Phút cuối cùng, tất cả máy chủ confirm lại chiều cao của danh sách tiến trình, tiết lộ một con số bí mật được xác định (Reverse Hash: xuất ra một ảnh của một chuỗi hash dài liên tiếp), chuỗi hash liên tục của process block (match với item cuối trong danh sách).
 11. Directory Block cho phút này được xây dựng từ tất cả các entry blocks được định nghĩa bởi tất cả máy chủ. Nên mỗi máy chủ có tất cả Entry Blocks, tất cả Directory Blocks và tất cả Entries.
 12. Tập hợp các Reverse Hash được combined để tạo một seed cho việc tái phân bố các ChainIDs cho các máy chủ trong mạng cho round tiếp theo.
-	12.1. Khi hoàn tất Directory Block thứ 10, thực hiện những bước sau:
-		12.1.1. Tạo ra Merkel roots cho các Entry Blocks tại phút cuối cùng, sorted by ChainID.
-		12.1.2. Tạo Directory Block tại phút cuối cùng và tính Merkel root của nó.
-		12.1.3. Tạo ra một neo của Merkle root của 10 Directory Block.
-		12.1.4. Các Revse Hashes được combined để tạo ra 1 seed dùng để lựa chọn máy chủ ghi neo vào Bitcoin.
-	12.2. Quay về bước 1.
+	
+	1. Khi hoàn tất Directory Block thứ 10, thực hiện những bước sau:
+		1. Tạo ra Merkel roots cho các Entry Blocks tại phút cuối cùng, sorted by ChainID.
+		2. Tạo Directory Block tại phút cuối cùng và tính Merkel root của nó.
+		3. Tạo ra một neo của Merkle root của 10 Directory Block.
+		4. Các Revse Hashes được combined để tạo ra 1 seed dùng để lựa chọn máy chủ ghi neo vào Bitcoin.
+	2. Quay về bước 1.
 
 
 Các máy chủ liên kết xây dựng một danh sách các process cho các Chains mà nó có trách nhiệm cũng như xây dựng Entry Blocks sẽ được sử dụng để tạo ra Directory Blocks vào phút cuối. Danh sách này là quan trọng cho việc broadcast các quyết định được thực hiện bởi một máy chủ trong mạng.
@@ -94,9 +83,7 @@ Khoảng thời gian nhip tim và khoảng thời gian timeout sẽ được s�
 Về thuật toán đồng thuận của Factom được trình bày trong tài liệu "Factom Concensus"
 
 
-### Factom System Overview
-
-Tổng quan về hệ thống Factom
+## Tổng quan về hệ thống Factom
 
 Factom được xây dựng từ tập hợp các tầng CTDL.
 
@@ -110,9 +97,7 @@ Các lớp và các ý niệm trong hệ thống Factom:
 4. Chains: Nhóm các Entries cụ thể cho một ứng dụng.
 
 
-### Directory Layer: How the Directory Layer Organizes Merkle Roots
-
-Directory Layer tổ chức Merkle root như thế nào?
+### Directory Layer tổ chức Merkle root như thế nào?
 
 Directory Layer là mức đầu tiên trong các tầng kiến trúc của hệ thống Factom. Nó định nghĩa các Entry ChainIDs được cập nhật trong suốt khoản thời gian được covered bởi Directory Block. (ChainID xác định Chain của các Entries của người dùng, việc sinh ra ChainID như thế nào sẽ trình bày sau ^^). Nó chủ yếu bao gồm một danh sách cặp ChainID và Merkle root của Entry Block chứa dữ liệu cho ChainID đó.
 
@@ -127,9 +112,7 @@ Dữ liệu được nhập vào Directory Blocks là đắt nhất, từ góc �
 Các hoạt động làm tăng kích thước DBs bao gồm việc tạo và cập nhật đầu tiên các Chains cá nhân. Những hoạt động này chỉ ra chi phí của các ứng dụng cố gắng tổ chức tốt hơn. Các ứng dụng phải được yêu cầu chi nhiều ECs hơn là một Entry đơn giản sẽ đòi hỏi phải ngăn cản làm quá tải Directory Blocks.
 
 
-### Entry Block Layer: How the Entry Block Layer Organizes Hashes and Data
-
-Entry Block Layer tổ chức các giá trị hash và data như thế nào?
+### Entry Block Layer tổ chức các giá trị hash và data như thế nào?
 
 Entry Blocks là cấp thứ hai của kiến trúc phân cấp trong hệ thống. Các ứng dụng cá nhân sẽ chú ý đến các ChainID khác nhau. Entry Blocks là nơi ứng dụng tìm kiếm Entries có thể mở rộng tìm kiếm của nó từ một ChainID để khám phá tất cả các mục có liên quan.
 
@@ -142,14 +125,14 @@ EB cố tình không chứa các Entries của chính nó. Điều này để ch
 Một Entry mô tả chi tiết về các chi tiết cụ thể của việc chuyển nhượng sẽ được đưa vào một Chuỗi khi dự kiến ​​việc chuyển giao tìm thấy. Sau đó, một hoặc nhiều auditor có thể tham khảo các hash của việc chuyển trong chuỗi của riêng họ, thêm các chữ ký mã hóa cho biết một đường chuyền hoặc không thành công. Tài liệu chuyển nhượng chỉ cần được lưu trữ một lần và nó sẽ được tham chiếu bởi nhiều Chuỗi khác nhau.
 
 
-### Entries: How Entries are Created
+### Entries được tạo ra như thế nào?
 
 Entries được xây dựng bởi người dùng và được submit lên Factom. Bằng những thông tin được hash hoặc mã hóa, người dùng có thể đảm bảo tính privacy của các entries. Các Entries này có thể là plain text nếu việc mã hóa dữ liệu là không cần thiết. Bằng việc ghi nhận 1 giá trị hash của 1 tài liệu, Factom có thể cung cấp proof of publication cơ bản. Trình bày tài liệu tại một thời gian sau cùng cho phép tạo giá trị hash của nó, so sánh nó với các giá trị hash được ghi nhận trong quá khứ.
 
 Dữ liệu cho phép là rất mềm dẻo và linh hoạt. Nó có thể nhỏ như một hyperlink. Nó có thể lớn hơn nhưng không thể quá lớn vì chi phí giới hạn kích thước dữ liệu. Điều này là tương tự như Bitcoin. Các transactions lớn hơn 100 kB+ Bitcoin là có thể nhưng yêu cầu chi trả cho khoảng phí tương ứng. Trong Bitcoin chi phí này sẽ là khổng lồ, bởi vì mỗi full node yêu cầu tất cả blockchain cho việc validate. Trong Factom, chỉ các DBs có level cao nhất yêu cầu full validate 1 chain, do đó chi phí nhỏ hơn.
 
 
-### Chains: How Entries are Organized into Chains
+### Chains lưu trữ Entries như thế nào?
 
 Các Chains trong Factom là các chuỗi Entries cái phản ánh các sự kiện liên quan đến 1 ứng dụng. Những chuỗi này là cốt lõi của Bitcoin 2.0. 
 
