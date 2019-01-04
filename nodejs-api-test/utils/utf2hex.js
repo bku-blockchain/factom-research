@@ -3,7 +3,6 @@ const path = require('path')
 
 const utf2hex = s => Buffer.from(s, 'utf8').toString('hex');
 
-
 const files = fs.readdirSync('./assets');
 
 if (!fs.existsSync('./dist')) fs.mkdirSync('./dist')

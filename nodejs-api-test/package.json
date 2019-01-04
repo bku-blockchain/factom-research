@@ -21,15 +21,7 @@
     "email": "huynhsamha@gmail.com",
     "url": "https://github.com/huynhsamha"
   },
-  "homepage": "https://github.com/huynhsamha/factom",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/huynhsamha/factom.git"
-  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/huynhsamha/factom/issues"
-  },
   "engines": {
     "node": ">=6.10.0",
     "npm": ">=3.10.8"

@@ -1,3 +1,3 @@
-# Factom
+# Factom Research
 
-Research factom blockchain
+Research Factom Blockchain
